@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.control.cell.ColorGridCell?>
+<?import com.sun.javafx.scene.control.WebColorField?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="nl.pep.imageview.LoadImgController" stylesheets="@styles.css">
+    <left >
+        <VBox alignment="CENTER" spacing="20.0" maxWidth="300.0" minWidth="300.0" styleClass="side-bar">
+            <Button text="Load Image" onAction="#onLoadImageButtonClick" styleClass="custom-button"/>
+            <VBox styleClass="custom-box">
+                <Label fx:id="stepsLabel" />
+                <HBox spacing="10.0">
+                    <Spinner fx:id="stepsSpinner" min="1" max="500" initialValue="250" maxWidth="300.0" editable="true"/>
+                </HBox>
+            </VBox>
+            <VBox styleClass="custom-box">
+                <Label fx:id="brightnessLabel" />
+                <HBox spacing="10.0">
+                    <Slider fx:id="brightnessSlider" blockIncrement="0.1" majorTickUnit="0.1" snapToTicks="true" min="0" max="2" value="1" maxWidth="300.0" styleClass="custom-slider"/>                </HBox>
+            </VBox>
+            <VBox styleClass="custom-box">
+                <Label fx:id="tintLabel" />
+                <HBox spacing="10.0">
+                    <Slider fx:id="tintSlider" blockIncrement="0.1" majorTickUnit="0.1" snapToTicks="true"  max="1" maxWidth="300.0" styleClass="custom-slider"/>
+                </HBox>
+            </VBox>
+            <VBox styleClass="custom-box">
+                <Label fx:id="saturationLabel" />
+                <HBox spacing="10.0">
+                    <Slider fx:id="saturationSlider" blockIncrement="0.1" majorTickUnit="0.1" snapToTicks="true" min="-1" max="1" maxWidth="300.0" styleClass="custom-slider"/>
+                </HBox>
+            </VBox>
+            <ColorPicker fx:id="baseColorPicker" maxWidth="300.0" styleClass="Color-picker"/>
+            <CheckBox fx:id="useBaseColorCheckBox" text="Use Base Color"/>
+        </VBox>
+    </left>
+    <center>
+        <ImageView fx:id="imageView" fitHeight="999.0" fitWidth="1619.0" preserveRatio="true"/>
+    </center>
+</BorderPane>
