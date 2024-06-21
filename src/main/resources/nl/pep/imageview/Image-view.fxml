@@ -3,8 +3,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<?import org.controlsfx.control.cell.ColorGridCell?>
-<?import com.sun.javafx.scene.control.WebColorField?>
 <BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="nl.pep.imageview.LoadImgController" stylesheets="@styles.css">
     <left >
         <VBox alignment="CENTER" spacing="20.0" maxWidth="300.0" minWidth="300.0" styleClass="side-bar">
@@ -18,7 +16,7 @@
             <VBox styleClass="custom-box">
                 <Label fx:id="brightnessLabel" />
                 <HBox spacing="10.0">
-                    <Slider fx:id="brightnessSlider" blockIncrement="0.1" majorTickUnit="0.1" snapToTicks="true" min="0" max="2" value="1" maxWidth="300.0" styleClass="custom-slider"/>                </HBox>
+                    <Slider fx:id="brightnessSlider" blockIncrement="0.1" majorTickUnit="0.1" snapToTicks="true" max="2" value="1" maxWidth="300.0" styleClass="custom-slider"/>                </HBox>
             </VBox>
             <VBox styleClass="custom-box">
                 <Label fx:id="tintLabel" />
