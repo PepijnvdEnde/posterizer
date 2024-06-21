@@ -11,7 +11,6 @@ import javafx.scene.paint.Color
 import javafx.stage.FileChooser
 import javafx.util.Duration
 import java.io.File
-import kotlin.math.pow
 import java.awt.Color as AwtColor
 
 class LoadImgController {
