@@ -149,10 +149,10 @@ class LoadImgController {
 
     private fun posterizeColor(hue: Float, clampedSat: Double, clampedBri: Double): Color {
         // Posterize the color by rounding the product of the color and steps, then dividing by steps
-        val posterizedHue = (Math.round(hue * steps) / steps.toDouble()).toFloat()
-        val posterizedSat = (Math.round(clampedSat * steps) / steps.toDouble()).toFloat()
-        val posterizedBri = (Math.round(clampedBri * steps) / steps.toDouble()).toFloat()
+        val posterizedHue = (Math.round(hue * steps) / steps.toDouble())
+        val posterizedSat = (Math.round(clampedSat * steps) / steps.toDouble())
+        val posterizedBri = (Math.round(clampedBri * steps) / steps.toDouble())
 
-        return Color.hsb(posterizedHue.toDouble() * 360, posterizedSat.toDouble(), posterizedBri.toDouble())
+        return Color.hsb(posterizedHue * 360, posterizedSat, posterizedBri)
     }
 }
